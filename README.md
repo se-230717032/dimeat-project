@@ -5,9 +5,10 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-In%20Progress-orange?style=for-the-badge" alt="Status">
-  <img src="https://img.shields.io/badge/Course-Software%20Project%20Management-blue?style=for-the-badge" alt="Course">
-  <img src="https://img.shields.io/badge/University-MSKU-green?style=for-the-badge" alt="University">
+  <img src="https://img.shields.io/badge/Status-In%20Progress-orange?style=for-the-badge&logo=git" alt="Status">
+  <img src="https://img.shields.io/badge/Course-Software%20Project%20Management-blue?style=for-the-badge&logo=bookstack" alt="Course">
+  <img src="https://img.shields.io/badge/University-MSKU-green?style=for-the-badge&logo=school" alt="University">
+  <img src="https://img.shields.io/badge/Platform-Web%2FMobile-purple?style=for-the-badge&logo=phone" alt="Platform">
 </p>
 
 ---
@@ -31,10 +32,10 @@
 
 | Team Member | Student ID | Primary Role | Core Responsibility |
 | :--- | :---: | :--- | :--- |
-| **Cemre Alkış** | `-` | Project Manager & Developer[cite: 3] | Project schedule, task distribution, agile tracking, and core implementation. |
+| **Cemre Alkış** | `230717008` | Project Manager & Developer[cite: 3] | Project schedule, task distribution, agile tracking, and core implementation. |
 | **Ebru Sena Ünsal** | `230717032` | Technical Lead & Developer[cite: 3] | Database architecture, backend services, and technical decisions. |
-| **Harun Arslan** | `-` | Quality & Test Lead / Developer[cite: 3] | Test scenarios, bug tracking, and code quality assurance. |
-| **Aysima Tatlı** | `-` | Documentation Lead / Developer[cite: 3] | Repository management, documentation, and version control (Git)[cite: 2, 3]. |
+| **Harun Arslan** | `220717604` | Quality & Test Lead / Developer[cite: 3] | Test scenarios, bug tracking, and code quality assurance. |
+| **Aysima Tatlı** | `230717043` | Documentation Lead / Developer[cite: 3] | Repository management, documentation, and version control (Git)[cite: 2, 3]. |
 
 ---
 
