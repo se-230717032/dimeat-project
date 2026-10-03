@@ -19,6 +19,31 @@
 
 ---
 
+## ✅ Project Roadmap & To-Do List
+
+- [x] **M0: Project Selection & Team Organization** (Current)
+  - [x] Form team and define roles[cite: 1]
+  - [x] Select project idea and define initial scope[cite: 1]
+  - [x] Initialize GitHub repository and README
+- [ ] **M1: Project Initiation**
+  - [ ] Project charter and stakeholder map
+  - [ ] Success criteria and delivery approach decision[cite: 4]
+- [ ] **M2: Project Plan Baseline**
+  - [ ] Product backlog and WBS[cite: 4, 5]
+  - [ ] Estimates, assumptions log, and schedule plan[cite: 5]
+  - [ ] RACI matrix and risk register[cite: 5]
+- [ ] **M3: Midterm Project Review**
+  - [ ] Deliver initial product increment[cite: 4, 5]
+  - [ ] Plan-vs-actual analysis[cite: 4, 5]
+- [ ] **M4: Project Control & Adaptation**
+  - [ ] Change request and impact analysis[cite: 5]
+  - [ ] Quality evidence and updated dashboard[cite: 5]
+- [ ] **M5: Project Closure & Final Demo**
+  - [ ] Final product demo and final report[cite: 5]
+  - [ ] Retrospective and lessons learned[cite: 5]
+
+---
+
 ## ✨ Key Features
 
 * 🔐 **Authentication:** Secure user registration, login, and personalized profile management.
@@ -44,6 +69,6 @@
 ```text
 dimeat/
 │
-├── docs/             # Project management reports (M0, M1, etc.)
-├── src/              # Application source code (Backend & Frontend)
+├── docs/             # Project management reports (M0, M1, etc.)[cite: 4]
+├── src/              # Application source code (Backend & Frontend)[cite: 2]
 └── README.md
