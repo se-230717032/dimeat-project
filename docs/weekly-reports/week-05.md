@@ -1,1 +1,37 @@
-﻿# Week 05 Status Report: DIMEAT Project`n`n* **Project:** DIMEAT (Hybrid Diet & Social Lifestyle Platform)`n* **Team:** Dimeat devs (Cemre Alkis, Ebru Sena Unsal, Harun Arslan, Aysima Tatli)`n* **Date / Period:** Week 05`n* **Milestone Focus:** M1 Post-Submission & M2 Preparation`n`n---`n`n### 1. Progress & Accomplishments (This Week)`n* **M1 Deliverable Finalization:** Successfully submitted the complete M1 Project Initiation Report on LMS and merged markdown files into the repository (`docs/M1-Project-Initiation.md`).`n* **Agile Management Board Setup:** Created and configured the public 5-column GitHub Projects Board (`DIMEAT Project Board`) and linked it to the primary repository.`n* **M2 Orientation:** Reviewed M2 (Project Plan Baseline) brief guidelines and set up the sprint roadmap for WBS and Backlog creation.`n`n---`n`n### 2. Planned vs. Actual Status`n| Activity / Task | Planned Status | Actual Status | Notes / Variance |`n| :--- | :--- | :--- | :--- |`n| **M1 LMS Submission** | Submit M1 Report Word File | **Completed** | Submitted on time. |`n| **GitHub Projects Board** | Set up 5-column Kanban board | **Completed** | Linked to repo, made Public with description & ReadMe. |`n| **M2 Kickoff** | Review M2 scope & task split | **Completed** | Assigned initial ownership for WBS and Story Points. |`n`n---`n`n### 3. Key Blockers & Risks`n* **Issue/Risk:** Ensuring consistent estimation scale (Story Points) across technical and non-technical tasks in M2.`n* **Mitigation:** Technical Lead (Ebru Sena) and Project Manager (Cemre) will conduct an estimation alignment session.`n`n---`n`n### 4. Next Week's Plan (Week 06 Focus)`n* Begin drafting the Work Breakdown Structure (WBS) and Product Backlog.`n* Assign Story Points to core backlog user stories.`n* Update GitHub Projects board with active M2 issues.`n* Document Week 06 Status Report.`n`n---`n`n### 5. Team Contributions (Week 05)`n* **Cemre Alkis:** Coordinated M1 submission alignment and M2 backlog roadmap planning.`n* **Ebru Sena Unsal:** Verified GitHub Projects linking and reviewed technical task architecture.`n* **Harun Arslan:** Validated QA guidelines for Kanban board columns and M1 submission data.`n* **Aysima Tatli:** Maintained repository documentation structure, set up Project Board ReadMe, and published Week 05 status report.
+Team: Dimeat devs Week: Week 5 Current milestone/sprint: M1 Post-Submission & M2 Preparation
+
+Done this week:
+
+* Submitted the finalized M1 Project Initiation Report on LMS and archived the markdown version in the repository (`docs/M1-Project-Initiation.md`).
+* Configured and activated the official GitHub Projects Board with a 5-column Kanban layout.
+* Linked the GitHub Projects Board to the main repository and initialized project backlog mapping.
+* Reviewed M2 (Project Plan Baseline) requirements and established team responsibility distribution.
+
+Planned for next week:
+
+* Structure the full Work Breakdown Structure (WBS) and Product Backlog epics.
+* Populate the GitHub Projects Board with detailed actionable issues.
+* Begin initial effort estimation using Fibonacci Story Points.
+* Update QA guidelines and Definition of Done (DoD) criteria.
+
+Top blocker or risk:
+
+* Risk: Ensuring consistent estimation scale (Story Points) across technical and non-technical tasks in M2.
+* Mitigation: Conducting a joint estimation alignment session between Technical Lead and Project Manager.
+
+Plan vs. actual:
+
+* Planned: Submit M1 report and set up project board.
+* Actual: 100% completed as scheduled.
+* Reason for deviation: None.
+
+Decision or support needed:
+
+* Feedback on M1 submission from course instructors.
+
+Individual contributions:
+
+* Cemre Alkış: Coordinated M1 submission alignment and M2 backlog roadmap planning.
+* Ebru Sena Ünsal: Verified GitHub Projects linking and reviewed technical task architecture.
+* Harun Arslan: Validated QA guidelines for Kanban board columns and M1 submission data.
+* Aysima Tatlı: Maintained repository documentation structure, configured Project Board settings, and published Week 05 status report.
