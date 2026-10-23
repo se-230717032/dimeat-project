@@ -1,1 +1,37 @@
-﻿# Week 06 Status Report: DIMEAT Project`n`n* **Project:** DIMEAT (Hybrid Diet & Social Lifestyle Platform)`n* **Team:** Dimeat devs (Cemre Alkis, Ebru Sena Unsal, Harun Arslan, Aysima Tatli)`n* **Date / Period:** Week 06`n* **Milestone Focus:** M2 (Project Plan Baseline) Execution & Backlog Structuring`n`n---`n`n### 1. Progress & Accomplishments (This Week)`n* **GitHub Projects Population:** Populated the project board with structured issues and tasks spanning Backlog, To Do, In Progress, and Done columns.`n* **Product Backlog & WBS Draft:** Structured high-level epics into modular Work Breakdown Structure components.`n* **Effort & Story Points Baseline:** Initiated Fibonacci story point scoring for initial functional user stories.`n* **M2 Milestone Preparation:** Prepared individual responsibility distribution for M2 document submission ahead of the Nov 1 deadline.`n`n---`n`n### 2. Planned vs. Actual Status`n| Activity / Task | Planned Status | Actual Status | Notes / Variance |`n| :--- | :--- | :--- | :--- |`n| **Project Board Population** | Populate Kanban board with M2 tasks | **Completed** | Items organized across 5 standard columns. |`n| **WBS Decomposition** | Draft core feature hierarchy | **Completed** | Epics broken down into manageable work items. |`n| **Week 06 Reporting** | Document progress | **Completed** | Published `week-06.md` to repository. |`n`n---`n`n### 3. Key Blockers & Risks`n* **Issue/Risk:** Tight schedule before November 1st M2 submission deadline across multiple core course deliverables.`n* **Mitigation:** Clear task division established; Cemre (WBS), Ebru Sena (Effort/Tech), Harun (Risks/QA), Aysima (RACI/Docs).`n`n---`n`n### 4. Next Week's Plan (Week 07 Focus - M2 Submission Week)`n* Finalize M2 Project Plan Baseline report (WBS, Story Points, RACI Matrix, QA Plan).`n* Complete peer review of M2 document.`n* Submit M2 report to LMS before November 1st deadline.`n`n---`n`n### 5. Team Contributions (Week 06)`n* **Cemre Alkis:** Structured initial WBS hierarchy and defined Product Backlog epics.`n* **Ebru Sena Unsal:** Established technical story point estimation criteria for backend components.`n* **Harun Arslan:** Drafted quality gates and Definition of Done (DoD) criteria for board tasks.`n* **Aysima Tatli:** Populated GitHub Projects board issues, updated documentation links, and prepared Week 06 status report.
+Team: Dimeat devs Week: Week 6 Current milestone/sprint: M2 - Project Plan Baseline
+
+Done this week:
+
+* Populated the GitHub Projects Board with structured issues across Backlog, To Do, In Progress, and Done columns.
+* Drafted the initial Work Breakdown Structure (WBS) hierarchy for core platform features (Auth, Meal Logging, Social Feed, AI Assistant).
+* Initiated Fibonacci story point scoring for primary functional user stories.
+* Standardized task acceptance criteria and Definition of Done (DoD) for sprint tracking.
+
+Planned for next week:
+
+* Finalize M2 Project Plan Baseline documentation (WBS, Story Points, RACI Matrix, QA Plan).
+* Conduct peer review of M2 deliverables prior to submission.
+* Submit M2 baseline report before the November 1st deadline.
+* Maintain GitHub Projects Board status updates.
+
+Top blocker or risk:
+
+* Risk: Tight schedule before the November 1st M2 submission deadline across multiple core deliverables.
+* Mitigation: Established strict task division and individual responsibility tracking within the team.
+
+Plan vs. actual:
+
+* Planned: Populate project board and draft WBS hierarchy for M2.
+* Actual: 100% completed as scheduled.
+* Reason for deviation: None.
+
+Decision or support needed:
+
+* Instructor confirmation on story point estimation matrix structure.
+
+Individual contributions:
+
+* Cemre Alkış: Structured initial WBS hierarchy and defined Product Backlog epics.
+* Ebru Sena Ünsal: Established technical story point estimation criteria for backend components.
+* Harun Arslan: Drafted quality gates and Definition of Done (DoD) criteria for board tasks.
+* Aysima Tatlı: Populated GitHub Projects board issues, updated documentation links, and prepared Week 06 status report.
