@@ -25,13 +25,13 @@
   - [x] Form team and define roles[cite: 1]
   - [x] Select project idea and define initial scope[cite: 1]
   - [x] Initialize GitHub repository and README
-- [ ] **M1: Project Initiation**
-  - [ ] Project charter and stakeholder map
-  - [ ] Success criteria and delivery approach decision[cite: 4]
-- [ ] **M2: Project Plan Baseline**
-  - [ ] Product backlog and WBS[cite: 4, 5]
-  - [ ] Estimates, assumptions log, and schedule plan[cite: 5]
-  - [ ] RACI matrix and risk register[cite: 5]
+- [x] **M1: Project Initiation**
+  - [x] Project charter and stakeholder map
+  - [x] Success criteria and delivery approach decision[cite: 4]
+- [x] **M2: Project Plan Baseline**
+  - [x] Product backlog and WBS[cite: 4, 5]
+  - [x] Estimates, assumptions log, and schedule plan[cite: 5]
+  - [x] RACI matrix and risk register[cite: 5]
 - [ ] **M3: Midterm Project Review**
   - [ ] Deliver initial product increment[cite: 4, 5]
   - [ ] Plan-vs-actual analysis[cite: 4, 5]
