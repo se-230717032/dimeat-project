@@ -1,0 +1,31 @@
+export function ageFromBirthDate(value: string, today = new Date()) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return null;
+  const [year, month, day] = value.split('-').map(Number);
+  const birth = new Date(year, month - 1, day);
+  if (dateKey(birth) !== value || birth > today) return null;
+  let age = today.getFullYear() - year;
+  if (today.getMonth() < month - 1 ||
+      (today.getMonth() === month - 1 && today.getDate() < day)) age -= 1;
+  return age;
+}
+
+export function minimumCalories(gender: ProfileFields['gender']) {
+  return gender === 'male' ? 1500 : 1200;
+}
+
+export function getTargets(profile: ProfileFields, weight = profile.current_weight_kg, today = new Date()) {
+  const age = ageFromBirthDate(profile.birth_date, today);
+  if (age === null || age < 18 || profile.special_circumstances) return null;
+  const factor = activities[profile.activity_level].factor;
+  const bmr = 10 * weight + 6.25 * profile.height_cm - 5 * age + (profile.gender === 'male' ? 5 : -161);
+  const tdee = bmr * factor;
+  const adjustment = { lose: -400, maintain: 0, gain: 250 }[profile.nutrition_goal];
+  const minimum = minimumCalories(profile.gender);
+  if (tdee + adjustment < minimum) return null;
+  const calories = Math.round(tdee + adjustment);
+  const proteinPerKg = Math.min(2, 1 + 0.15 * profile.activity_level + (profile.nutrition_goal === 'maintain' ? 0 : 0.2));
+  const fat = Math.round(calories * 0.28 / 9);
+  const protein = Math.round(Math.min(weight * proteinPerKg, calories * 0.35 / 4));
+  const carbohydrates = Math.round((calories - protein * 4 - fat * 9) / 4);
+  return { bmr: Math.round(bmr), tdee: Math.round(tdee), calories, protein, carbohydrates, fat, calculation_weight_kg: weight };
+}
