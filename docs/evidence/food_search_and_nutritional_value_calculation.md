@@ -1,0 +1,137 @@
+# Food Search and Nutritional Value Calculation
+
+## 1. Overview
+
+This code implements a multilingual food search mechanism, standardized food name display, and gram-based nutritional value calculation for the DIMEAT application.
+
+## 2. Objectives
+
+- Support Turkish and English food search queries.
+- Enable category-based food filtering.
+- Handle alternative food names and search aliases.
+- Eliminate duplicate food search results.
+- Select representative food entries.
+- Prioritize meat and poultry results for animal-related searches.
+- Provide standardized food display names.
+- Calculate nutritional values based on portion size.
+
+## 3. Implementation
+
+```typescript
+export function searchFoods(query: string, category?: FoodCategory) {
+  const normalized = query.trim().toLocaleLowerCase('tr-TR');
+  const inCategory = foods.filter((food) => {
+    if (category && food.category !== category) return false;
+    return true;
+  });
+  if (!normalized) return [];
+
+  const matchesWord = (value: string, locale: string) => {
+    const text = value.toLocaleLowerCase(locale);
+    if (normalized.includes(' ')) return text.includes(normalized);
+    return text.split(/[^\p{L}\p{N}]+/u).some((word) => word.startsWith(normalized));
+  };
+  const turkishMatches = inCategory.filter((food) =>
+    matchesWord(simplifiedFoodName(food), 'tr-TR'),
+  );
+  const searchAlias = FOOD_SEARCH_ALIASES.find(([term]) => term === normalized)?.[1];
+  const aliasedTurkishMatches = searchAlias
+    ? inCategory.filter((food) => simplifiedFoodName(food).startsWith(searchAlias))
+    : [];
+  const turkishSearchMatches = turkishMatches.length > 0 ? turkishMatches : aliasedTurkishMatches;
+  const englishAnimal = MEAT_ANIMALS.find(([term]) => term === normalized);
+  const englishHint = FOOD_NAME_HINTS.find(([term]) => term === normalized);
+  const mappedEnglishName = englishAnimal?.[1] ?? englishHint?.[1];
+  const matches = turkishSearchMatches.length > 0
+    ? turkishSearchMatches
+    : mappedEnglishName
+      ? inCategory.filter((food) => simplifiedFoodName(food).startsWith(mappedEnglishName))
+      : inCategory.filter((food) => matchesWord(food.name_en, 'en-US'));
+
+  const grouped = new Map<string, Food>();
+  for (const food of matches) {
+    const key = simplifiedFoodName(food).toLocaleLowerCase('tr-TR');
+    const existing = grouped.get(key);
+    if (!existing || representativeScore(food) > representativeScore(existing)) {
+      grouped.set(key, food);
+    }
+  }
+
+  const isAnimalSearch = MEAT_ANIMALS.some(([english, turkish]) => {
+    const turkishAnimal = turkish
+      .replace(/ eti$/, '')
+      .toLocaleLowerCase('tr-TR');
+    return normalized === english || normalized === turkishAnimal;
+  });
+
+  return [...grouped.values()].sort((a, b) =>
+    (isAnimalSearch
+      ? Number(b.category === 'Meat & Poultry') - Number(a.category === 'Meat & Poultry')
+      : 0) || simplifiedFoodName(a).localeCompare(simplifiedFoodName(b), 'tr'),
+  );
+}
+
+export function getFoodDisplayName(food: Food) {
+  return simplifiedFoodName(food);
+}
+
+export function calculateForGrams(food: Food, grams: number) {
+  const multiplier = grams / 100;
+  const result: Record<string, number | null> = {};
+  for (const [key, value] of Object.entries(food)) {
+    if (typeof value === 'number') result[key] = Number((value * multiplier).toFixed(4));
+  }
+  return result;
+}
+```
+
+## 4. Technical Explanation
+
+| Function | Responsibility |
+|---|---|
+| `searchFoods()` | Searches, filters, groups, and sorts food entries. |
+| `matchesWord()` | Performs locale-aware word and phrase matching. |
+| `simplifiedFoodName()` | Provides simplified food names. |
+| `representativeScore()` | Determines the representative food entry among duplicates. |
+| `getFoodDisplayName()` | Returns the standardized food display name. |
+| `calculateForGrams()` | Calculates portion-based numeric food values with four-decimal precision. |
+
+## 5. Related Work Item
+
+- **Work Item:** Food Search & Nutritional Value Calculation
+- **Category:** Food Database and Nutrition Management
+- **Priority:** High (Proposed)
+- **Status:** Pending integration and verification
+
+## 6. Proposed Test Scenarios
+
+- Valid Turkish search query.
+- Valid English search query.
+- Empty search query.
+- Category-based filtering.
+- Partial word and phrase matching.
+- Alternative food name matching.
+- Duplicate food entry elimination.
+- Animal-related search prioritization.
+- Alphabetical result sorting.
+- Nutritional calculation for different portion sizes.
+- Zero and negative gram inputs.
+- Missing and non-numeric nutritional values.
+
+## 7. Evidence and Validation Status
+
+- **Source code snippet:** Available
+- **Runtime testing:** Not yet verified
+- **Nutritional calculation accuracy:** Pending validation
+- **Integration with the current DIMEAT architecture:** Pending confirmation
+- **Contribution attribution:** Pending team confirmation
+
+## 8. Expected Benefits
+
+- Improved food search experience.
+- Multilingual search support.
+- Reduced duplicate search results.
+- More relevant food search results.
+- Consistent food naming.
+- Portion-based nutritional calculations.
+- Improved dietary tracking experience.
