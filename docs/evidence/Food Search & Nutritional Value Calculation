@@ -1,23 +1,18 @@
-# Food Search and Nutritional Value Calculation
+Food Search and Nutritional Value Calculation
+1. Overview
+This code implements a multilingual food search mechanism, standardized food name display, and gram-based nutritional value calculation for the DIMEAT application.
 
-## 1. Overview
-
-This code implements a multilingual food search mechanism, standardized food name display, and gram-based nutritional value calculation. It supports Turkish and English search queries, category-based filtering, alias matching, duplicate elimination, and result prioritization.
-
-## 2. Objectives
-
+2. Objectives
 - Support Turkish and English food search queries.
 - Enable category-based food filtering.
 - Handle alternative food names and search aliases.
 - Eliminate duplicate food search results.
-- Select the most representative food entry.
+- Select representative food entries.
 - Prioritize meat and poultry results for animal-related searches.
 - Provide standardized food display names.
-- Calculate nutritional values based on the specified gram amount.
+- Calculate nutritional values based on portion size.
 
-## 3. Implementation
-
-```typescript
+3. Implementation
 export function searchFoods(query: string, category?: FoodCategory) {
   const normalized = query.trim().toLocaleLowerCase('tr-TR');
   const inCategory = foods.filter((food) => {
@@ -83,65 +78,51 @@ export function calculateForGrams(food: Food, grams: number) {
   }
   return result;
 }
-```
 
-## 4. Technical Explanation
 
-| Function / Component | Responsibility |
-|---|---|
-| `searchFoods()` | Searches, filters, groups, and sorts food entries. |
-| `matchesWord()` | Performs locale-aware word-prefix and phrase matching. |
-| `simplifiedFoodName()` | Provides a simplified food name for searching, grouping, and display. |
-| `FOOD_SEARCH_ALIASES` | Provides alternative search term mappings. |
-| `MEAT_ANIMALS` | Provides animal name mappings and supports meat category prioritization. |
-| `FOOD_NAME_HINTS` | Provides English-to-Turkish food name mappings. |
-| `representativeScore()` | Determines which food entry is retained among duplicate names. |
-| `getFoodDisplayName()` | Returns the standardized display name of a food entry. |
-| `calculateForGrams()` | Scales numeric food values according to the specified gram amount and rounds results to four decimal places. |
 
-## 5. Related Work Item
+4. Technical Explanation
+Function	Responsibility
+searchFoods()	Searches, filters, groups, and sorts food entries.
+matchesWord()	Performs locale-aware word and phrase matching.
+simplifiedFoodName()	Provides simplified food names.
+representativeScore()	Determines the representative food entry among duplicates.
+getFoodDisplayName()	Returns the standardized food display name.
+calculateForGrams()	Calculates portion-based numeric food values with four-decimal precision.
 
-- **Work Item:** Food Search & Nutritional Value Calculation — ID pending confirmation
-- **Category:** Food Database and Nutrition Management
-- **Priority:** High (Proposed)
-- **Status:** Pending integration and verification
 
-## 6. Proposed Test Scenarios
+5. Related Work Item
+- Work Item: Food Search & Nutritional Value Calculation
+- Category: Food Database and Nutrition Management
+- Priority: High (Proposed)
+- Status: Pending integration and verification
 
-- Valid Turkish food search query.
-- Valid English food search query.
-- Case-insensitive and locale-aware search.
-- Partial word and multi-word phrase matching.
-- Empty or whitespace-only search query.
-- Search with no matching food entries.
-- Category-based food filtering.
-- Alternative food name and alias matching.
+6. Proposed Test Scenarios
+- Valid Turkish search query.
+- Valid English search query.
+- Empty search query.
+- Category-based filtering.
+- Partial word and phrase matching.
+- Alternative food name matching.
 - Duplicate food entry elimination.
-- Representative food entry selection.
-- Animal-related search result prioritization.
-- Alphabetical sorting using Turkish locale.
-- Standardized food name display.
-- Nutritional value calculation for different gram amounts.
-- Zero and negative gram input validation.
-- Handling of non-numeric and missing food values.
-- Verification of numerical rounding to four decimal places.
+- Animal-related search prioritization.
+- Alphabetical result sorting.
+- Nutritional calculation for different portion sizes.
+- Zero and negative gram inputs.
+- Missing and non-numeric nutritional values.
 
-## 7. Evidence and Validation Status
+7. Evidence and Validation Status
+- Source code snippet: Available
+- Runtime testing: Not yet verified
+- Nutritional calculation accuracy: Pending validation
+- Integration with the current DIMEAT architecture: Pending confirmation
+- Contribution attribution: Pending team confirmation
 
-- **Source code snippet:** Available
-- **Runtime testing:** Not yet verified
-- **Nutritional calculation accuracy:** Pending validation against reference data
-- **Input validation:** Additional verification required for negative and non-finite gram values
-- **Integration with the current DIMEAT architecture:** Pending confirmation
-- **Contribution attribution:** Pending team confirmation
-
-## 8. Expected Benefits
-
-- Improved food search accuracy and usability.
-- Multilingual food search support.
-- Reduced duplicate and redundant search results.
-- More relevant and organized food recommendations within search results.
-- Consistent food naming across the application.
-- Portion-based nutritional value calculation.
+8. Expected Benefits
+- Improved food search experience.
+- Multilingual search support.
+- Reduced duplicate search results.
+- More relevant food search results.
+- Consistent food naming.
+- Portion-based nutritional calculations.
 - Improved dietary tracking experience.
-- Reusable food search and nutritional calculation functions.
